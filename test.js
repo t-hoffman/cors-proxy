@@ -18,9 +18,10 @@ const options = {
     method: 'GET',
     headers: {
         'Target-URL': 'https://jsonplaceholder.typicode.com/todos/1',
-        'Authorization': '1234'
+        'Authorization': '1234',
+        'Access-Control-Allow-Origin': '*'
     }
 }
-fetch ('http://localhost:3000/', options)
+fetch ('http://t-hoffman.github.io/cors-proxy/', options)
 .then (resp => resp.json())
 .then (json => console.log(json))
